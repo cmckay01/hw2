@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Synth</title>
+    <style>
+        /* Add your styling here */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <label for="waveform">Waveform:</label>
+        <select id="waveform">
+            <option value="sine">Sine</option>
+            <option value="sawtooth">Sawtooth</option>
+        </select>
+
+        <label for="synthType">Synth Type:</label>
+        <select id="synthType">
+            <option value="additive">Additive</option>
+            <option value="am">AM</option>
+            <option value="fm">FM</option>
+        </select>
+
+        <br>
+
+        <label for="lfoFrequency">LFO Frequency:</label>
+        <input type="range" id="lfoFrequency" min="0.1" max="10" value="2">
+
+        <label for="lfoDepth">LFO Depth:</label>
+        <input type="range" id="lfoDepth" min="0" max="3" value="1">
+
+        <br>
+
+        <label for="lfoTarget">LFO Target:</label>
+        <select id="lfoTarget">
+            <option value="none">None</option>
+            <option value="attack">Envelope Attack</option>
+            <option value="decay">Envelope Decay</option>
+            <option value="sustain">Envelope Sustain</option>
+            <option value="release">Envelope Release</option>
+            </select>
+
+        <br>
+
+        <label for="clippingPrevention">Prevent Clipping:</label>
+        <input type="checkbox" id="clippingPrevention">
+
+        <label for="modulationFrequency">Modulation Frequency:</label>
+        <input type="range" id="modulationFrequency" min="0.1" max="10" value="2">
+
+        <label for="partials">Number of Partials:</label>
+        <input type="number" id="partials" min="1" max="10" value="3">
+
+        <button id="startRecording">Start Recording</button>
+        <button id="stopRecording">Stop Recording</button>
+
+        <br>
+
+        <br>
+
+        <br>
+
+        <br>
+
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
